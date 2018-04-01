@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: iot-service
+
+server:
+  port: 7773
+
+eureka:
+  client:
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:7770/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    prefer-ip-address: true
