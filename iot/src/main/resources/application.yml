@@ -1,6 +1,22 @@
 spring:
   application:
     name: iot-service
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://192.168.99.100:5432/iotdata
+    username: postgres
+    password: mysecretpassword
 
 server:
   port: 7773
